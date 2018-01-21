@@ -1,0 +1,50 @@
+.bg-lime-green{
+   p{
+      color: $off-white;
+   }
+}
+.bg-light-blue{
+   .section-heading{
+      h2{
+         color: $off-white;
+      }
+   }
+}
+%unordered-list{
+   @extend %listreset;
+   padding: 10px 0 21px;
+   li{
+      margin-bottom: 0.8125em;
+      padding-left: 1.5625em;
+      padding-top: 0.64em;
+      position: relative;
+      color: $black;
+      &:before{
+         font-family: 'icomoon';
+         @include font(25px, 1, 300);
+         position: absolute;
+         color: $lime-green;
+         content: "\f105";
+         top: 8px;
+         left: 0;
+      }
+      & + li{
+         border-top: 1px solid desaturate($light-blue, 25%);
+      }
+   }
+}
+.unordered-list{
+   @extend %unordered-list;
+}
+.more-link{
+   -webkit-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+   @include font(1.125em, 1.3333, 500);
+   font-family: $base-font-sans-serif;
+   display: inline-block;
+   vertical-align: top;
+   padding: 0.7222em;
+   &:hover{
+      background-color: darken($lime-green, 20%);
+   }
+}

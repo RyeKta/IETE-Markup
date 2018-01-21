@@ -1,0 +1,4 @@
+##SCSS cache
+.sass-cache/
+*.config
+*.map
